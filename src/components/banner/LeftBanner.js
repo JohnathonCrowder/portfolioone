@@ -1,11 +1,14 @@
 import React from 'react'
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaReact } from "react-icons/fa";
-import { SiTailwindcss, SiFigma, SiNextdotjs } from "react-icons/si";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaReact, FaPython } from "react-icons/fa";
+import { SiTailwindcss, SiFigma, SiNextdotjs, SiFlask } from "react-icons/si";
+import { DiJsBadge } from "react-icons/di";
+
+
 
 const LeftBanner = () => {
     const [text] = useTypewriter({
-      words: ["Professional Coder.", "Full Stack Developer.", "UI Designer."],
+      words: ["Professional Coder.", "Full Stack Developer.", "Website Designer."],
       loop: true,
       typeSpeed: 20,
       deleteSpeed: 10,
@@ -16,7 +19,7 @@ const LeftBanner = () => {
       <div className="flex flex-col gap-5">
         <h4 className=" text-lg font-normal">WELCOME TO MY WORLD</h4>
         <h1 className="text-6xl font-bold text-white">
-          Hi, I'm <span className="text-designColor capitalize">John doe</span>
+          Hi, I'm        <span className="text-designColor capitalize">         Johnathon Crowder</span>
         </h1>
         <h2 className="text-4xl font-bold text-white">
           a <span>{text}</span>
@@ -27,9 +30,7 @@ const LeftBanner = () => {
           />
         </h2>
         <p className="text-base font-bodyFont leading-6 tracking-wide">
-          I use animation as a third dimension by which to simplify experiences
-          and kuiding thro each and every interaction. I'm not adding motion
-          just to spruce things up, but doing it in ways that.
+        Welcome to my portfolio! I am a dedicated programmer with a passion for Python and web development, specializing in creating efficient, user-friendly websites and automation solutions. With a keen eye for detail and a commitment to delivering high-quality code, I strive to bring creativity and functionality together in every project. Explore my work to see how I can help bring your ideas to life through innovative programming solutions.
         </p>
       </div>
       <div className="flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-between">
@@ -55,16 +56,16 @@ const LeftBanner = () => {
           </h2>
           <div className="flex gap-4">
             <span className="bannerIcon">
-              <FaReact />
+              <FaPython />
             </span>
             <span className="bannerIcon">
-              <SiNextdotjs />
+              <SiFlask />
             </span>
             <span className="bannerIcon">
               <SiTailwindcss />
             </span>
             <span className="bannerIcon">
-              <SiFigma />
+              <DiJsBadge  />
             </span>
           </div>
         </div>
