@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../layouts/Title'
-import { projectOne, projectTwo, projectThree, projectFour } from "../../assets/index";
+import { projectOne, projectTwo, projectThree, projectFour, projectFive } from "../../assets/index";
 import ProjectsCard from './ProjectsCard';
 
 const Projects = () => {
@@ -15,13 +15,7 @@ const Projects = () => {
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
-        <ProjectsCard
-          title="CodeFusionX"
-          des=" Streamlined coding With Ai Assistance. Supports multiple languages and formats with an intuitive interface. Effortlessly upload and combine programming files to submit to Ai Models. "
-          src={projectOne}
-          git_link={"https://github.com/JohnathonCrowder/CodeFusionX"}
-          web_link={"https://codefusionx.onrender.com/"}
-        />
+        
         <ProjectsCard
           title="Cave Mapping Tool"
           des=" CaveMapper USA is a Flask-powered project showcasing an interactive map for exploring cave locations across the United States.  It combines geospatial technology with user engagement to promote cave exploration and conservation.
@@ -46,10 +40,18 @@ const Projects = () => {
           web_link={"https://heartlanddachshunds.onrender.com/"}
         />
         <ProjectsCard
-          title="E-commerce Website"
-          des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
+          title="DirtBikes Unlimited"
+          des=" I designed and built a Flask-based website for Dirtbikes Unlimited, a dirtbike repair shop. The site provides an easy-to-navigate interface for exploring repair services and contacting the company. The focus was on creating a user-friendly experience that highlights the company’s repair expertise and facilitates customer engagement."
+          src={projectFive}
+          git_link={"https://github.com/JohnathonCrowder/DirtBikesUnlimited"}
+          web_link={"https://dirtbikesunlimited.onrender.com/"}
+        /> 
+        <ProjectsCard
+          title="CodeFusionX"
+          des=" Streamlined coding With Ai Assistance. Supports multiple languages and formats with an intuitive interface. Effortlessly upload and combine programming files to submit to Ai Models. "
           src={projectOne}
+          git_link={"https://github.com/JohnathonCrowder/CodeFusionX"}
+          web_link={"https://codefusionx.onrender.com/"}
         />
         <ProjectsCard
           title="Chatting App"
