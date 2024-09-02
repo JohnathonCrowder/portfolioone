@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import Title from '../layouts/Title';
 import ContactLeft from './ContactLeft';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [username, setUsername] = useState("");
@@ -19,7 +20,7 @@ const Contact = () => {
   };
   // ========== Email Validation end here ================
 
-  const handleSend = (e) => {
+  const handleSend = async (e) => {
     e.preventDefault();
     if (username === "") {
       setErrMsg("Username is required!");
@@ -30,21 +31,46 @@ const Contact = () => {
     } else if (!emailValidation(email)) {
       setErrMsg("Give a valid Email!");
     } else if (subject === "") {
-      setErrMsg("Plese give your Subject!");
+      setErrMsg("Please give your Subject!");
     } else if (message === "") {
       setErrMsg("Message is required!");
     } else {
-      setSuccessMsg(
-        `Thank you dear ${username}, Your Messages has been sent Successfully!`
-      );
-      setErrMsg("");
-      setUsername("");
-      setPhoneNumber("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
+      try {
+        // Prepare the email data
+        const templateParams = {
+          from_name: username,
+          from_email: email,
+          phone_number: phoneNumber,
+          subject: subject,
+          message: message,
+          to_email: "johnathoncrowder@gmail.com" // Replace with your actual email
+        };
+  
+        // Send email using EmailJS
+        await emailjs.send(
+          'service_mpz8rn8',
+          'template_8beclsf',
+          templateParams,
+          'eVXBfW_ymEVNPGIf8'
+        );
+  
+        setSuccessMsg(
+          `Thank you dear ${username}, Your message has been sent successfully!`
+        );
+        setErrMsg("");
+        setUsername("");
+        setPhoneNumber("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      } catch (error) {
+        console.error("Error sending email:", error);
+        setErrMsg("Failed to send message. Please try again later.");
+      }
     }
   };
+
+
   return (
     <section
       id="contact"
