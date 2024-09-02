@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import Title from '../layouts/Title';
 import ContactLeft from './ContactLeft';
 import emailjs from 'emailjs-com';
@@ -19,6 +19,18 @@ const Contact = () => {
       .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
   };
   // ========== Email Validation end here ================
+
+
+   // UseEffect to clear messages after 15 seconds
+   useEffect(() => {
+    const timer = setTimeout(() => {
+      setErrMsg("");
+      setSuccessMsg("");
+    }, 15000);
+
+    return () => clearTimeout(timer);
+  }, [errMsg, successMsg]);
+
 
   const handleSend = async (e) => {
     e.preventDefault();
@@ -174,16 +186,7 @@ const Contact = () => {
                   Send Message
                 </button>
               </div>
-              {errMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
-                  {errMsg}
-                </p>
-              )}
-              {successMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-green-500 text-base tracking-wide animate-bounce">
-                  {successMsg}
-                </p>
-              )}
+              
             </form>
           </div>
         </div>
