@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaLaptopCode, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { contactImg } from "../../assets/index";
 
 const ContactLeft = () => {
@@ -27,19 +27,19 @@ const ContactLeft = () => {
         </p>
       </div>
       <div className="flex flex-col gap-4">
-        <h2 className="text-base uppercase font-titleFont mb-4">Find me on</h2>
-        <div className="flex gap-4">
-          <span className="bannerIcon">
-            <FaFacebookF />
-          </span>
-          <span className="bannerIcon">
-            <FaGithub />
-          </span>
-          <span className="bannerIcon">
-            <FaLinkedinIn />
-          </span>
-        </div>
-      </div>
+  <h2 className="text-base uppercase font-titleFont mb-4">Find me on</h2>
+  <div className="flex gap-4">
+    <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" className="bannerIcon">
+      <FaLaptopCode />
+    </a>
+    <a href="https://github.com/JohnathonCrowder" target="_blank" rel="noopener noreferrer" className="bannerIcon">
+      <FaGithub />
+    </a>
+    <a href="https://www.linkedin.com/in/johnathon-crowder-465645281/" target="_blank" rel="noopener noreferrer" className="bannerIcon">
+      <FaLinkedinIn />
+    </a>
+  </div>
+</div>
     </div>
   );
 }
