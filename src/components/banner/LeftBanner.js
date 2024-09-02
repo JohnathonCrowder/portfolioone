@@ -21,14 +21,16 @@ const LeftBanner = () => {
         <h1 className="text-6xl font-bold text-white">
           Hi, I'm        <span className="text-designColor capitalize">         Johnathon Crowder</span>
         </h1>
-        <h2 className="text-4xl font-bold text-white">
-          a <span>{text}</span>
-          <Cursor
-            cursorBlinking="false"
-            cursorStyle="|"
-            cursorColor="#ff014f"
-          />
-        </h2>
+        <div className="h-[100px] sm:h-auto overflow-hidden sm:overflow-visible">
+  <h2 className="text-4xl font-bold text-white">
+    a <span>{text}</span>
+    <Cursor
+      cursorBlinking="false"
+      cursorStyle="|"
+      cursorColor="#ff014f"
+    />
+  </h2>
+</div>
         <p className="text-base font-bodyFont leading-6 tracking-wide">
         Welcome to my portfolio! I am a dedicated programmer with a passion for Python and web development, specializing in creating efficient, user-friendly websites and automation solutions. With a keen eye for detail and a commitment to delivering high-quality code, I strive to bring creativity and functionality together in every project. Explore my work to see how I can help bring your ideas to life through innovative programming solutions.
         </p>
