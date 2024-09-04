@@ -14,7 +14,7 @@ const Experience = () => {
           <p className="text-sm text-designColor tracking-[4px]">2018 - Present</p>
           <h2 className="text-3xl md:text-4xl font-bold">Job Experience</h2>
         </div>
-        <div className="mt-6 lgl:mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+        <div className="mt-6 lgl:mt-14 w-full border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
           <ResumeCard
             title="Software Engineer"
             subTitle="DataAnnotation  - (2023 - Present)"
@@ -27,7 +27,6 @@ const Experience = () => {
             result="USA"
             des="Working on a large variety of projects over the years. I have alot of experience coding in general and feel comfortable working in many different areas and languages. I find my own clients and help solve whatever problems they need help with. "
           />
-        
         </div>
       </div>
       <div>
@@ -35,7 +34,7 @@ const Experience = () => {
           <p className="text-sm text-designColor tracking-[4px]">2014 - 2018</p>
           <h2 className="text-3xl md:text-4xl font-bold">Other Experience</h2>
         </div>
-        <div className="mt-6 lgl:mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+        <div className="mt-6 lgl:mt-14 w-full border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
           <ResumeCard
             title="Programming Instructor"
             subTitle="4-H Youth Development (2016 - 2018)"
@@ -48,7 +47,6 @@ const Experience = () => {
             result="USA"
             des="My highschool robotics team. This is where I developed a passion for coding. I worked with a team of programmers to write Python code to control robots for First Competition. I also played a part in setting up all the electronics for multiple robots. "
           />
-          
         </div>
       </div>
     </motion.div>
