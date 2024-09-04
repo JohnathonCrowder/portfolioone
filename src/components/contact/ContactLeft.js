@@ -16,8 +16,7 @@ const ContactLeft = () => {
           Full-Stack Developer
         </p>
         <p className="text-base text-gray-400 tracking-wide">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
-          ipsam autem cumque, accusantium dicta odio.
+        Please do not hesitate to reach out for any of your coding needs. Your satisfaction is important to me, and I am committed to providing the support and solutions you require.
         </p>
         <p className="text-base text-gray-400 flex items-center gap-2">
           Phone: <span className="text-lightText">+1 (618) 316-2840</span>
